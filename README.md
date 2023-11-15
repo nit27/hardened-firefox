@@ -10,13 +10,6 @@ For sensitive cases,[Tor Browser](https://torproject.org) is highly recommended 
 - Your FireFox Browser will work as a strict mode. Some websites and their services might not work properly. Use on your own risk.  
 - Make sure your Operating System is set up clean & secure. If you use MacOS, you can reference my [MacOS Clean Installation & Configuration]().
 - Update to the latest version of FireFox and carefully back your OS up.
-# Agenda
-- [Install Mozilla FireFox Browser](#Install Mozilla FireFox Browser)
-- [Harden FireFox](#Harden FireFox)
-- [Install additional add-ons (extensions)](#Install additional add-ons (extensions))
-- [Configure FireFox settings](#Configure FireFox Settings)
-- [Tweak your favourite preferences](#Tweak your favourite preferences on `user-overrides.js`)
-- [Update](#Update `user.js`)
 # Install Mozilla FireFox Browser
 You can install FireFox from [the official website](https://www.mozilla.org/en-US/firefox/new) or install via `Homebrew` is my favourite way
 ``
@@ -54,7 +47,7 @@ Choose 1
 - In FireFox, type `about:preferences#search` on searchbar
 - Default Search Engine, switch to `DuckDuckGo`
 - Type `about:preferences#privacy`, Security: uncheck `Block dangerous and deceptive content`
-# Tweak your favourite preferences on `user-overrides`
+# Tweak your favourite preferences
 You can feel free to customise your preferences in `user-overrides`. Please keep the file `user.js` unless you want to update it. See below.  
 Commond customisations (not recommend, use on your own risk):  
 - Enable cookie persistence
@@ -69,7 +62,7 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true); //  Set to `false` to en
 user_pref("places.history.enabled", false); // Set to `false` to enable history
 ``  
 Restart Firefox.
-# Update `user.js`
+# Update
 It is neccessary to keep the `user.js` up-to-date. I find that the author might update `user.js` when FireFox has a new release. However, you should backup the `user.js` file before you backup. See how to backup [here](https://github.com/arkenfox/user.js/wiki/2.2-Backup).
 To update `user.js`, run this command in your default profile root directory:
 ``
