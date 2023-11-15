@@ -12,7 +12,6 @@ For sensitive cases, [Tor Browser](https://torproject.org) is highly recommended
 - Update to the latest version of FireFox and carefully back your OS up.
 # Install Mozilla FireFox Browser
 You can install FireFox from [the official website](https://www.mozilla.org/en-US/firefox/new) or install via `Homebrew` is my favourite way  
-
 ``
 $ brew install --cask firefox
 ``  
@@ -24,24 +23,17 @@ $ brew install --cask firefox
 - Open Terminal and run ``$ cd "<your path>"``  
 *Note: You must put your path inside two qotation marks*  
 - Copy downloaded files to your default profile root directory  
-
 ``
 $ cp ~/Download/user-overrides.js user.js updater.sh prefsCleaner.sh <your path>
-``
- 
+`` 
 - Change file's permission  
-
 ``
-$ chroot +x user-overrides.js user.js updater.sh prefsCleaner.sh
+$ chmod +x user-overrides.js user.js updater.sh prefsCleaner.sh
 ``
-
 - Clear your previous preferences  
-
 ``
 $ ./prefsCleaner.sh
-``  
-  
--> Choose 1
+`` -> Choose 1
 - Restart FireFox.  
 ## Install additional add-ons (extensions)
 - [FireFox Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) for isolating every tab you browse. See how to use [here](https://support.mozilla.org/en-US/kb/containers)
@@ -59,24 +51,23 @@ Common customisations (not recommend, use on your own risk):
 ``
 user_pref("network.cookie.lifetimePolicy", 2); // Set to `0` to enable default cookie persistence
 ``  
-
 ``
 user_pref("privacy.sanitize.sanitizeOnShutdown", true); //  Set to `false` to enable cookie and site data persistence
 ``
-  
-- Keep history
-
+- Keep history  
 ``
 user_pref("places.history.enabled", false); // Set to `false` to enable history
 ``  
+
 -> Restart Firefox.
 # Update
 It is neccessary to keep the `user.js` up-to-date. I find that the author might update `user.js` when FireFox has a new release. However, you should backup the `user.js` file before you backup. See how to backup [here](https://github.com/arkenfox/user.js/wiki/2.2-Backup).
-To update `user.js`, run this command in your default profile root directory:
+To update `user.js`, run this command in your default profile root directory:  
 ``
 $ ./updater.sh
 ``
 - Choose `Y` to accept the update
-- Choose `N` to discard  
-Restart FireFox.
+- Choose `N` to discard
+
+-> Restart FireFox.
 
