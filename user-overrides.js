@@ -20,18 +20,19 @@ user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 user_pref("identity.fxaccounts.enabled", false);
-user_pref("layout.spellcheckDefault", 0); // Used to disable spellchecker. Set to `1` to enable spellcheck.
+user_pref("layout.spellcheckDefault", 1); // Used to disable spellchecker. Set to `1` to enable spellcheck.
 user_pref("media.peerconnection.enabled", false); // Used to disable WebRTC (mitigating WebRTC leaks)… set to `true` to enable WebRTC
 user_pref("network.cookie.cookieBehavior", 1);
-user_pref("network.cookie.lifetimePolicy", 2); // Used to delete cookies when Firefox is closed. Set to `0` to enable default cookie persistence
+user_pref("network.cookie.lifetimePolicy", 0); // Used to delete cookies when Firefox is closed. Set to `0` to enable default cookie persistence
 user_pref("network.proxy.socks_remote_dns", true);
+user_pref("privacy.clearSiteData.cookiesAndStorage", true); // keep false until it respects "allow" site exceptions
 user_pref("network.trr.custom_uri", "https://doh.mullvad.net/dns-query");
 user_pref("network.trr.mode", 3); // Used to enable Mullvad DNS over HTTPS. Set to `5` to disable Mullvad DNS over HTTPS
 user_pref("network.trr.uri", "https://doh.mullvad.net/dns-query");
 user_pref("places.history.enabled", false);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.history.custom", true);
-user_pref("privacy.sanitize.sanitizeOnShutdown", true); // Used to delete cookies and site data when Firefox is closed. Set to `false` to enable cookie and site data persistence
+user_pref("privacy.sanitize.sanitizeOnShutdown", false); // Used to delete cookies and site data when Firefox is closed. Set to `false` to enable cookie and site data persistence
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
 user_pref("signon.management.page.breach-alerts.enabled", false);
@@ -87,5 +88,5 @@ user_pref("toolkit.telemetry.coverage.opt-out", true);
 // Firefox fingerprinting hardening using about:config
 user_pref("privacy.resistFingerprinting", true); // Used to help resist fingerprinting but breaks dark mode and screenshots (among other features). Set to `true` for increased privacy
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
-user_pref("privacy.resistFingerprinting.letterboxing", true); // Used to help resist fingerprinting. Set to `false` to disable letterboxing
+user_pref("privacy.resistFingerprinting.letterboxing", false); // Used to help resist fingerprinting. Set to `false` to disable letterboxing
 user_pref("webgl.disabled", true);
