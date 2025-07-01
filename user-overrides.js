@@ -1,11 +1,21 @@
+// Startpage & New tab
+//user_pref("browser.startup.page", 1);
+//user_pref("browser.startup.homepage", "about:home");
+//user_pref("browser.newtabpage.enabled",true);
+
+// Disable Sidebar revamp & Vertical Tabs
+user_pref("sidebar.revamp", false);
+user_pref("sidebar.verticalTabs", false);
+
 // Set default search engine: DuckDuckGo
 user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
+user_pref("browser.urlbar.scotchBonnet.enableOverride",false); // disable search engine suggestion.
 
 // Set default permissions
  // * Location, Camera, Microphone, VR
  // * 0=always ask (default), 1=allow, 2=block.
 user_pref("permissions.default.geo", 2);
-user_pref("permissions.default.camera", 2);
+user_pref("permissions.default.camera", 0);
 user_pref("permissions.default.microphone", 0);
 user_pref("permissions.default.desktop-notification", 0);
 user_pref("permissions.default.xr", 2); // Virtual Reality.
@@ -19,9 +29,9 @@ user_pref("privacy.resistFingerprinting.pbmode", true); // Enable RFP in PBMode.
 user_pref("layout.spellcheckDefault", 1); // Set to `0` to disable spellcheck (optional).
 
 // Custom DNS over HTTPS
-user_pref("network.trr.custom_uri", "https://doh.mullvad.net/dns-query"); // Choose custom server here https://mullvad.net/en/help/dns-over-https-and-dns-over-tls.
-user_pref("network.trr.mode", 2); // Set to `5` to disable Mullvad DNS over HTTPS.
-user_pref("network.trr.uri", "https://doh.mullvad.net/dns-query");
+// user_pref("network.trr.custom_uri", "https://doh.mullvad.net/dns-query"); // Choose custom server here https://mullvad.net/en/help/dns-over-https-and-dns-over-tls.
+user_pref("network.trr.mode", 5); // Set to `5` to disable Mullvad DNS over HTTPS.
+// user_pref("network.trr.uri", "https://doh.mullvad.net/dns-query");
 user_pref("network.dns.disableIPv6", true); // Disable IPv6.
 user_pref("doh-rollout.disable-heuristics", true);
 
@@ -36,8 +46,8 @@ user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 
 // Disable built-in bullshit features
-user_pref("extensions.pocket.enabled", false); // Mozilla Pocket.
-user_pref("identity.fxaccounts.enabled", false); // Unknow service (correct me if you know).
+//user_pref("extensions.pocket.enabled", false); // Mozilla Pocket. // Pocket is removed from v140+.
+user_pref("identity.fxaccounts.enabled", false); // Disable ff account.
 user_pref("extensions.fxmonitor.enabled", false); // Unknow service (correct me if you know).
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // "What's new" gift icon from toolbar and main menu.
 user_pref("dom.forms.autocomplete.formautofill", false); // Disable autofill.
@@ -48,7 +58,7 @@ user_pref("signon.rememberSignons", false); // Do not save logins and passwords 
 user_pref("signon.management.page.breach-alerts.enabled", false); // Hide alerts about passwords for breached sites.
 
 // Disable WebRTC (WebGL was already disable from user.js)
-user_pref("media.peerconnection.enabled", false);
+//user_pref("media.peerconnection.enabled", false);
 
 // Protect your private IP even in TRUSTED scenarios after you grant device access
 user_pref("media.peerconnection.ice.no_host", true); // May result in breakage on video-conferencing platforms.
